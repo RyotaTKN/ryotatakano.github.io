@@ -1,0 +1,19 @@
+h1 {
+  color: darkslategray;
+  border-bottom: 2px darkslategray;
+}
+h2 {
+  color: cadetblue;
+  margin-top: 40px;
+  padding-top: 30px;
+}
+h3 {
+  color: slategray;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid #006;
+}
