@@ -1,0 +1,23 @@
+name: "Ryota Takano"
+navbar: 
+  title: "Ryota Takano"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Works"
+      href: shumi.html
+    - text: "Links"
+      href: link.html
+
+output:
+  html_document:
+    theme: yeti 
+    highlight: textmate
+    toc: false
+    toc_float: 
+      collapse: false
+    df_print: "kable"
+    include:
+      after_body: 
+    css: site_style.css
+output_dir: "docs"
