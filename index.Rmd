@@ -1,0 +1,85 @@
+---
+title: Ryota Takano
+---
+
+<div style="width:225px; height:150px">
+<p><img src="pic/pic2.jpg"></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style=>
+<p>
+<a href="https://twitter.com/takano_ryota">
+<img src="pic/twitter.png" width="40px" height="40px"> </a>
+<a href="https://www.researchgate.net/profile/Ryota-Takano">
+<img src="pic/rg.png" width="40px" height="40px"> 
+<a href="https://scholar.google.co.jp/citations?user=ucldCngAAAAJ&hl=ja">
+<img src="pic/gs.png" width="40px" height="40px"> 
+<a href="https://osf.io/bpjds/">
+<img src="pic/osf.png" width="40px" height="40px"> 
+<a href="https://github.com/RyotaTKN">
+<img src="pic/gh.jpg" width="40px" height="40px"> 
+</a>
+</p>
+
+# {.tabset .tabset-pills}
+## **English**
+### **ABOUT ME**
+
+#### PhD candidate 
+#### Affiliation: Department of Cognitive Psychology, Graduate School of Education, Kyoto University, Japan
+#### E-mail: takano.ryota.43a[at]st.kyoto-u.ac.jp
+<br>
+
+### **EDUCATION**
+
+#### Ph.D.   Kyoto University, 2019-2022 (Anticipated)
+#### M.A.    Kyoto University, 2017-2019
+#### B.A.    Kyoto University, 2015-2017
+<br>
+
+### **RESEARCH EXPERIENCE**
+
+#### Research Fellow (DC1) of the Japan Society for the Promotion of Science, 2019-2022
+<br>
+
+### **RESEARCH INTERESTS**
+
+#### Intergroup relations, Collective behavior, Emotion, Empathy, Neuroimaging (fMRI), Physical Responses (Pupil dilation, SCR)
+<br>
+
+### **Skills**
+
+#### R, jsPsych, Qualtrics, MatLab, Psychopy, SPSS, JASP, etc.
+
+## **日本語**
+### **高野了太**
+
+#### 博士後期課程 D3 
+#### 所属：京都大学大学院教育学研究科 教育認知心理学講座
+#### E-mail: takano.ryota.43a[at]st.kyoto-u.ac.jp
+<br>
+
+### **経歴**
+
+#### Ph.D.   京都大学, 2019-2022 (見込み)
+#### M.A.    京都大学, 2017-2019
+#### B.A.    京都大学, 2015-2017
+<br>
+
+### **RESEARCH EXPERIENCE**
+
+#### 日本学術振興会特別研究員 DC1, 2019-2022
+<br>
+
+### **研究関心**
+
+#### 集団間関係、集合行動、感情、共感、神経イメージング (fMRI), 生理学的反応 (瞳孔径、皮膚電位反応)
+<br>
+
+### **Skills**
+
+#### R, jsPsych, Qualtrics, MatLab, Psychopy, SPSS, JASP, etc.

@@ -19,5 +19,5 @@ output:
     df_print: "kable"
     include:
       after_body: 
-    css: site_style.css
+    css: a_style.css
 output_dir: "docs"
