@@ -13,22 +13,36 @@
 
 <title>Ryota Takano</title>
 
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -41,32 +55,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
@@ -77,10 +66,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -97,40 +82,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -158,7 +116,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -170,7 +128,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -181,10 +139,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -196,7 +167,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -289,7 +259,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -302,8 +272,12 @@ $(document).ready(function () {
 <p><img src="pic/pic2.jpg" /></p>
 </div>
 <p><br> <br> <br> <br> <br></p>
-<div id="about-me" class="section level2">
-<h2><strong>ABOUT ME</strong></h2>
+<div id="section" class="section level1 tabset tabset-pills">
+<h1 class="tabset tabset-pills"></h1>
+<div id="english" class="section level2">
+<h2><strong>English</strong></h2>
+<div id="about-me" class="section level3">
+<h3><strong>ABOUT ME</strong></h3>
 <div id="phd-candidate" class="section level4">
 <h4>PhD candidate</h4>
 </div>
@@ -316,13 +290,13 @@ $(document).ready(function () {
 <div id="lab-homepagein-japanese-researchgate-google-scholar" class="section level4">
 <h4><a href="http://cogpsy.educ.kyoto-u.ac.jp/member/takano.html">Lab Homepage(in Japanese)</a>, <a href="https://www.researchgate.net/profile/Ryota_Takano">ResearchGate</a>, <a href="https://scholar.google.co.jp/citations?user=ucldCngAAAAJ&amp;hl=ja">Google Scholar</a></h4>
 </div>
-<div id="curriculum-vitae-cv" class="section level3">
-<h3><a href="https://drive.google.com/file/d/1beMi4sr4bpTMRckQKzdkUq6yQqEHUTuy/view?usp=sharing">Curriculum Vitae (CV)</a></h3>
+<div id="curriculum-vitae-cv" class="section level4">
+<h4><a href="https://drive.google.com/file/d/1beMi4sr4bpTMRckQKzdkUq6yQqEHUTuy/view?usp=sharing">Curriculum Vitae (CV)</a></h4>
 <p><br></p>
 </div>
 </div>
-<div id="education" class="section level2">
-<h2><strong>EDUCATION</strong></h2>
+<div id="education" class="section level3">
+<h3><strong>EDUCATION</strong></h3>
 <div id="ph.d.-kyoto-university-2019-2022-anticipated" class="section level4">
 <h4>Ph.D. Kyoto University, 2019-2022 (Anticipated)</h4>
 </div>
@@ -334,24 +308,78 @@ $(document).ready(function () {
 <p><br></p>
 </div>
 </div>
-<div id="research-experience" class="section level2">
-<h2><strong>RESEARCH EXPERIENCE</strong></h2>
+<div id="research-experience" class="section level3">
+<h3><strong>RESEARCH EXPERIENCE</strong></h3>
 <div id="research-fellow-dc1-of-the-japan-society-for-the-promotion-of-science-2019-2022" class="section level4">
 <h4>Research Fellow (DC1) of the Japan Society for the Promotion of Science, 2019-2022</h4>
 <p><br></p>
 </div>
 </div>
-<div id="research-interests" class="section level2">
-<h2><strong>RESEARCH INTERESTS</strong></h2>
+<div id="research-interests" class="section level3">
+<h3><strong>RESEARCH INTERESTS</strong></h3>
 <div id="intergroup-relations-spirituality-empathy-emotion-awe-proantisocial-behavior-political-attitude-neuroscience-fmri-tdcs-social-cognition" class="section level4">
 <h4>Intergroup relations, spirituality, empathy, emotion, awe, pro(anti)social behavior, political attitude, neuroscience (fMRI, tDCS), social cognition</h4>
 <p><br></p>
 </div>
 </div>
-<div id="skills" class="section level2">
-<h2><strong>SKILLS</strong></h2>
+<div id="skills" class="section level3">
+<h3><strong>SKILLS</strong></h3>
 <div id="r-jspsych-html-javascript-qualtrics-spmconn-matlab-tdcs-spss-etc" class="section level4">
 <h4>R, jsPsych (HTML, javascript), Qualtrics, SPM/Conn (MATLAB), tDCS, SPSS, etc</h4>
+</div>
+</div>
+</div>
+<div id="日本語" class="section level2">
+<h2><strong>日本語</strong></h2>
+<div id="高野了太" class="section level3">
+<h3><strong>高野了太</strong></h3>
+<div id="d3-博士後期課程3年次" class="section level4">
+<h4>D3 (博士後期課程3年次)</h4>
+</div>
+<div id="所属京都大学大学院教育学研究科-教育認知心理学講座" class="section level4">
+<h4>所属：京都大学大学院教育学研究科 教育認知心理学講座</h4>
+</div>
+<div id="e-mail-takano.ryota.43aatst.kyoto-u.ac.jp-1" class="section level4">
+<h4>E-mail: takano.ryota.43a[at]st.kyoto-u.ac.jp</h4>
+</div>
+<div id="所属研究室のhp-researchgate-google-scholar" class="section level4">
+<h4><a href="http://cogpsy.educ.kyoto-u.ac.jp/member/takano.html">所属研究室のHP</a>, <a href="https://www.researchgate.net/profile/Ryota_Takano">ResearchGate</a>, <a href="https://scholar.google.co.jp/citations?user=ucldCngAAAAJ&amp;hl=ja">Google Scholar</a></h4>
+<p><br></p>
+</div>
+</div>
+<div id="経歴" class="section level3">
+<h3><strong>経歴</strong></h3>
+<div id="ph.d.-京都大学-2019-2022-見込" class="section level4">
+<h4>Ph.D. 京都大学, 2019-2022 (見込)</h4>
+</div>
+<div id="m.a.-京都大学-2017-2019" class="section level4">
+<h4>M.A. 京都大学, 2017-2019</h4>
+</div>
+<div id="b.a.-京都大学-2015-2017" class="section level4">
+<h4>B.A. 京都大学, 2015-2017</h4>
+<p><br></p>
+</div>
+</div>
+<div id="職歴" class="section level3">
+<h3><strong>職歴</strong></h3>
+<div id="日本学術振興会特別研究員-dc1-2019-2022" class="section level4">
+<h4>日本学術振興会特別研究員 DC1, 2019-2022</h4>
+<p><br></p>
+</div>
+</div>
+<div id="研究関心" class="section level3">
+<h3><strong>研究関心</strong></h3>
+<div id="集団-スピリチュアリティ-共感-感情-畏敬-awe-神経科学-fmri-tdcs-社会的認知" class="section level4">
+<h4>集団, スピリチュアリティ, 共感, 感情, 畏敬 (awe), 神経科学 (fMRI, tDCS), 社会的認知</h4>
+<p><br></p>
+</div>
+</div>
+<div id="スキル" class="section level3">
+<h3><strong>スキル</strong></h3>
+<div id="r-jspsych-html-javascript-qualtrics-spmconn-matlab-tdcs-spss-etc-1" class="section level4">
+<h4>R, jsPsych (HTML, javascript), Qualtrics, SPM/Conn (MATLAB), tDCS, SPSS, etc</h4>
+</div>
+</div>
 </div>
 </div>
 
@@ -364,7 +392,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -382,7 +410,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
